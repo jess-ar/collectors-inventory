@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { CollectionCardComponent } from '@components/collection-card/collection-card.component';
-import { CategoryButtonComponent } from '@components/category-button/category-button.component';
+import { CommonModule, NgFor } from '@angular/common'; // 👈 Asegura que NgFor está importado
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, CollectionCardComponent, CategoryButtonComponent], 
-  templateUrl: './app.component.html',
-})
-export class AppComponent {
-  title = 'collectors-inventory';
+  imports: [CommonModule, NgFor],
+  template: `
+    <h1 class="text-4xl font-bold text-primary">Mi colección</h1>
 
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+      <img *ngFor="let item of collectionItems" [src]="item.imageUrl" [alt]="item.altText" 
+        class="rounded-lg shadow-md w-full h-64 object-cover">
+    </div>
+  `,
+})
+export class HomesPage {
   collectionItems = [
     { imageUrl: 'https://res.cloudinary.com/dt052lsti/image/upload/v1741290765/Star-Wars-Jedi-Survivor-Vintage-Collection-Figura-Jetpack-Trooper-10-cm-1-600x600_ki5yim.jpg', altText: 'Figura 1' },
     { imageUrl: 'https://res.cloudinary.com/dt052lsti/image/upload/v1741290766/0ef32ba41130c40d9dd94b1b495baae0_kx8uhl.jpg', altText: 'Figura 2' },
