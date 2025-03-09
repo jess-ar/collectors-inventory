@@ -1,0 +1,21 @@
+<h1 class="text-4xl font-bold text-primary text-center mt-6">Mi colección</h1>
+
+<div class="carousel-container relative w-full overflow-hidden p-4 bg-black">
+  <div
+    #scrollContainer
+    class="flex gap-4 w-full overflow-hidden relative"
+    (mouseover)="stopScroll()"
+    (mouseleave)="startScroll()"
+  >
+    <div
+      *ngFor="let item of infiniteCollection"
+      class="carousel-item-container flex items-center justify-center"
+    >
+      <img
+        [src]="item.imageUrl"
+        [alt]="item.altText"
+        class="carousel-item"
+      />
+    </div>
+  </div>
+</div>
