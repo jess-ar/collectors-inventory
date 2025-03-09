@@ -1,25 +1,24 @@
 import { Routes } from '@angular/router';
-import { HomesPage } from '@pages/home.page';
-import { StarWarsPage } from '@pages/star-wars.page';
-import { LegoPage } from '@pages/lego.page';
-import { MarvelPage } from '@pages/marvel.page';
-import { PezPage } from '@pages/pez.page';
-import { JuegosPage } from '@pages/juegos.page';
-import { FunkosPage } from '@pages/funkos.page';
-import { ClasicosPage } from '@pages/clasicos.page';
-import { VariosPage } from '@pages/varios.page';
+import { HomeComponent } from '@pages/home/home.component';
+import { StarWarsComponent } from '@pages/star-wars/star-wars.component';
+import { LegoComponent } from '@pages/lego/lego.component';
+import { MarvelComponent } from '@pages/marvel/marvel.component';
+import { PezComponent } from '@pages/pez/pez.component';
+import { JuegosComponent } from '@pages/juegos/juegos.component';
+import { FunkosComponent } from '@pages/funkos/funkos.component';
+import { ClasicosComponent } from '@pages/clasicos/clasicos.component';
+import { VariosComponent } from '@pages/varios/varios.component';
 
 export const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomesPage },
-  { path: 'home', component: HomesPage },
-  { path: 'star-wars', component: StarWarsPage },
-  { path: 'lego', component: LegoPage },
-  { path: 'marvel', component: MarvelPage },
-  { path: 'pez', component: PezPage },
-  { path: 'juegos', component: JuegosPage },
-  { path: 'funkos', component: FunkosPage },
-  { path: 'clasicos', component: ClasicosPage },
-  { path: 'varios', component: VariosPage },
+  { path: 'home', component: HomeComponent },
+  { path: 'star-wars', component: StarWarsComponent },
+  { path: 'lego', component: LegoComponent },
+  { path: 'marvel', component: MarvelComponent },
+  { path: 'pez', component: PezComponent },
+  { path: 'juegos', component: JuegosComponent },
+  { path: 'funkos', component: FunkosComponent },
+  { path: 'clasicos', component: ClasicosComponent },
+  { path: 'varios', component: VariosComponent },
   { path: '**', redirectTo: 'home' }
 ];

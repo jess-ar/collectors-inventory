@@ -1,0 +1,53 @@
+<nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900 text-white shadow-lg">
+    <div class="flex items-center justify-between px-6 py-4">
+
+        <!-- Logo / Título -->
+        <div class="text-xl font-bold">
+            Collector's Inventory
+        </div>
+
+        <!-- Navegación -->
+        <div class="hidden md:flex space-x-4">
+            <a routerLink="/home" routerLinkActive="text-primary font-bold"
+                class="hover:text-primary transition">HOME</a>
+            <a routerLink="/star-wars" routerLinkActive="text-primary font-bold"
+                class="hover:text-primary transition">🖤 Star Wars</a>
+            <a routerLink="/lego" routerLinkActive="text-primary font-bold" class="hover:text-primary transition">🟡
+                Lego</a>
+            <a routerLink="/marvel" routerLinkActive="text-primary font-bold" class="hover:text-primary transition">🔵
+                Marvel</a>
+            <a routerLink="/pez" routerLinkActive="text-primary font-bold" class="hover:text-primary transition">🟥
+                Pez</a>
+            <a routerLink="/juegos" routerLinkActive="text-primary font-bold" class="hover:text-primary transition">🎲
+                Juegos</a>
+            <a routerLink="/funkos" routerLinkActive="text-primary font-bold" class="hover:text-primary transition">🟠
+                Funkos</a>
+            <a routerLink="/clasicos" routerLinkActive="text-primary font-bold" class="hover:text-primary transition">❤️
+                Clásicos</a>
+            <a routerLink="/varios" routerLinkActive="text-primary font-bold" class="hover:text-primary transition">💎
+                Varios</a>
+        </div>
+
+        <!-- Botón hamburguesa (mobile) -->
+        <div class="md:hidden">
+            <button (click)="toggleMobileMenu()" class="focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menú móvil -->
+    <div *ngIf="isMobileMenuOpen" class="md:hidden px-6 pb-4 space-y-2">
+        <a routerLink="/home" (click)="closeMobileMenu()" class="block">HOME</a>
+        <a routerLink="/star-wars" (click)="closeMobileMenu()" class="block">🖤 Star Wars</a>
+        <a routerLink="/lego" (click)="closeMobileMenu()" class="block">🟡 Lego</a>
+        <a routerLink="/marvel" (click)="closeMobileMenu()" class="block">🔵 Marvel</a>
+        <a routerLink="/pez" (click)="closeMobileMenu()" class="block">🟥 Pez</a>
+        <a routerLink="/juegos" (click)="closeMobileMenu()" class="block">🎲 Juegos</a>
+        <a routerLink="/funkos" (click)="closeMobileMenu()" class="block">🟠 Funkos</a>
+        <a routerLink="/clasicos" (click)="closeMobileMenu()" class="block">❤️ Clásicos</a>
+        <a routerLink="/varios" (click)="closeMobileMenu()" class="block">💎 Varios</a>
+    </div>
+</nav>

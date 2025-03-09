@@ -1,27 +1,14 @@
+<app-navbar></app-navbar>
+
 <div class="flex flex-col items-center min-h-screen p-6 pt-32 text-white bg-black">
-
-  <!-- Botones de categorías -->
-  <div class="flex flex-wrap justify-center gap-4 mb-6">
-    <app-category-button label="HOME" route="/home"></app-category-button>
-    <app-category-button label="🖤 Star Wars" route="/star-wars"></app-category-button>
-    <app-category-button label="🟡 Lego" route="/lego"></app-category-button>
-    <app-category-button label="🔵 Marvel" route="/marvel"></app-category-button>
-    <app-category-button label="🟥 Pez" route="/pez"></app-category-button>
-    <app-category-button label="🎲 Juegos" route="/juegos"></app-category-button>
-    <app-category-button label="🟠 Funkos" route="/funkos"></app-category-button>
-    <app-category-button label="❤️ Clásicos" route="/clasicos"></app-category-button>
-    <app-category-button label="💎 Varios" route="/varios"></app-category-button>
-  </div>  
-
   <!-- Sección de Cards -->
   <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-    <app-collection-card 
+    <app-collection-card
       *ngFor="let item of collectionItems"
       [imageUrl]="item.imageUrl"
       [altText]="item.altText">
     </app-collection-card>
   </div>
 
-  <!-- Contenido dinámico cargado por rutas -->
   <router-outlet></router-outlet>
 </div>

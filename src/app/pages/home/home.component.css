@@ -1,0 +1,22 @@
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.carousel-item-container {
+  flex: 0 0 auto;
+}
+
+.carousel-item {
+  width: 12rem;
+  height: 16rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+}
